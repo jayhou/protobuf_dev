@@ -13,4 +13,6 @@
 
 > make & ./watch_face_pb_test 命令来decode 来自文件 ./protobuf_javanano/JavaNanoTest/test.bin 的 字节流
 
-> 修改./protobuf_nano_c/nanopb/examples/watch_proto_testt/watch_widget_info.proto 用命令:
+> 修改./protobuf_nano_c/nanopb/examples/watch_proto_testt/watch_widget_info.proto
+
+> make 时会生成对应的java文件到 ./protobuf_javanano/JavaNanoTest/src/
