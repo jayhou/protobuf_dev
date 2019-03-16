@@ -1,0 +1,83 @@
+// A very simple protocol definition, consisting of only
+// one message.
+
+syntax = "proto2";
+//import "nanopb.proto";
+
+// for javanano
+option java_package = "com.huami.watch.sensorhub";
+option java_outer_classname = "WatchWidgetInfo";
+
+message QuarterCircleProgress {
+    required int32 icon = 1;
+    required string shortText = 2;
+    required float progress = 3;
+}
+
+message QuarterCircleStepProgress {
+    required int32 dataType = 1;
+    required int32 icon = 2;
+    required string shortText = 3; //TODO:change to bytes for utf-16 codec
+    required float progress = 4;
+    required int32 step = 5;
+}
+
+message QuarterCircleText {
+    required string shortText = 1;
+}
+
+message TinyCircleIcon {
+    required int32 icon = 1;
+}
+
+message TinyCircleText {
+    required string shortText = 1;
+}
+
+message TinyCircleIconWText {
+    required int32 icon = 1;
+    required string shortText = 2;
+}
+
+message TinyCircleDText {
+    repeated string multiLineMessage = 1;
+}
+
+message RoundRectCirleWText {
+    required int32 icon = 1;
+    required string shortText = 2;
+    required float progress = 3; 
+}
+
+message RoundRectTextOnly {
+    required string longText = 1;
+}
+
+message SingleLineText {
+    required string shortText = 1;
+}
+
+message MultiLineText {
+    repeated string multiLineMessage = 1;
+}
+message ImageText {
+    repeated uint32 imageAddr = 1;
+}
+
+//sensorhub 存储的结构
+//多个QuarterCircleProgress控件信息，最多4个
+message QuarterCircleProgresses {
+    repeated QuarterCircleProgress circleProgresses = 1;
+}
+
+//message QuarterCircleStepProgresses {
+//    repeated QuarterCircleStepProgress circleStepProgresses = 1;
+//}
+
+message QuarterCircleTexts {
+    repeated QuarterCircleText circleTexts = 1;
+}
+
+message WatchFaceInfo {
+    repeated QuarterCircleStepProgress circleStepProgresses = 1;
+}

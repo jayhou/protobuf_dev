@@ -1,0 +1,2 @@
+SimpleMessage.text  max_size:22
+SimpleMessage.req_bytes max_size:50

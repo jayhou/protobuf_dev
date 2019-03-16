@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.google.protobuf.nano:protobuf-javanano:3.2.0rc2" type="repository">
+    <properties maven-id="com.google.protobuf.nano:protobuf-javanano:3.2.0rc2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/protobuf-javanano-3.2.0rc2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

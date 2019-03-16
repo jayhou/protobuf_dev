@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "watch_widget_info.pb.h": "c",
+        "pb_decode.h": "c"
+    }
+}
