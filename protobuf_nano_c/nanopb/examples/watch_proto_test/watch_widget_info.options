@@ -1,2 +1,3 @@
 WatchFaceInfo.circleStepProgresses    max_count:4
 QuarterCircleStepProgress.shortText max_size:10
+KlvpProtocol.stream type:FT_CALLBACK

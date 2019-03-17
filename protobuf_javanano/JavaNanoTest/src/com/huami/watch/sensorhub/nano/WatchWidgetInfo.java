@@ -5,6 +5,108 @@ package com.huami.watch.sensorhub.nano;
 @SuppressWarnings("hiding")
 public interface WatchWidgetInfo {
 
+  public static final class KlvpProtocol extends
+      com.google.protobuf.nano.MessageNano {
+
+    private static volatile KlvpProtocol[] _emptyArray;
+    public static KlvpProtocol[] emptyArray() {
+      // Lazily initializes the empty array
+      if (_emptyArray == null) {
+        synchronized (
+            com.google.protobuf.nano.InternalNano.LAZY_INIT_LOCK) {
+          if (_emptyArray == null) {
+            _emptyArray = new KlvpProtocol[0];
+          }
+        }
+      }
+      return _emptyArray;
+    }
+
+    // required int32 type = 1;
+    public int type;
+
+    // required bytes stream = 2;
+    public byte[] stream;
+
+    // required bytes stream2 = 3;
+    public byte[] stream2;
+
+    public KlvpProtocol() {
+      clear();
+    }
+
+    public KlvpProtocol clear() {
+      type = 0;
+      stream = com.google.protobuf.nano.WireFormatNano.EMPTY_BYTES;
+      stream2 = com.google.protobuf.nano.WireFormatNano.EMPTY_BYTES;
+      cachedSize = -1;
+      return this;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
+        throws java.io.IOException {
+      output.writeInt32(1, this.type);
+      output.writeBytes(2, this.stream);
+      output.writeBytes(3, this.stream2);
+      super.writeTo(output);
+    }
+
+    @Override
+    protected int computeSerializedSize() {
+      int size = super.computeSerializedSize();
+      size += com.google.protobuf.nano.CodedOutputByteBufferNano
+          .computeInt32Size(1, this.type);
+      size += com.google.protobuf.nano.CodedOutputByteBufferNano
+          .computeBytesSize(2, this.stream);
+      size += com.google.protobuf.nano.CodedOutputByteBufferNano
+          .computeBytesSize(3, this.stream2);
+      return size;
+    }
+
+    @Override
+    public KlvpProtocol mergeFrom(
+            com.google.protobuf.nano.CodedInputByteBufferNano input)
+        throws java.io.IOException {
+      while (true) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            return this;
+          default: {
+            if (!com.google.protobuf.nano.WireFormatNano.parseUnknownField(input, tag)) {
+              return this;
+            }
+            break;
+          }
+          case 8: {
+            this.type = input.readInt32();
+            break;
+          }
+          case 18: {
+            this.stream = input.readBytes();
+            break;
+          }
+          case 26: {
+            this.stream2 = input.readBytes();
+            break;
+          }
+        }
+      }
+    }
+
+    public static KlvpProtocol parseFrom(byte[] data)
+        throws com.google.protobuf.nano.InvalidProtocolBufferNanoException {
+      return com.google.protobuf.nano.MessageNano.mergeFrom(new KlvpProtocol(), data);
+    }
+
+    public static KlvpProtocol parseFrom(
+            com.google.protobuf.nano.CodedInputByteBufferNano input)
+        throws java.io.IOException {
+      return new KlvpProtocol().mergeFrom(input);
+    }
+  }
+
   public static final class QuarterCircleProgress extends
       com.google.protobuf.nano.MessageNano {
 

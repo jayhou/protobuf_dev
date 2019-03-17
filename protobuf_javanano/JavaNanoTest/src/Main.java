@@ -10,7 +10,12 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello Proto Nano!");
+
         WatchWidgetInfo.WatchFaceInfo mWatchFaceInfo = new WatchWidgetInfo.WatchFaceInfo();
+
+        WatchWidgetInfo.KlvpProtocol mKlvpProtocol = new WatchWidgetInfo.KlvpProtocol();
+
+        mKlvpProtocol.type = 1;
 
         mWatchFaceInfo.circleStepProgresses = new WatchWidgetInfo.QuarterCircleStepProgress[4];
         int j;
@@ -42,7 +47,8 @@ public class Main {
         mWatchFaceInfo.circleStepProgresses[3].step = 37;
 
 
-        System.out.println("bytes len:" + mWatchFaceInfo.getSerializedSize());
+
+        System.out.println("klvp pay load bytes len:" + mWatchFaceInfo.getSerializedSize());
         byte[] flatArray = new byte[mWatchFaceInfo.getSerializedSize()];
         CodedOutputByteBufferNano output = CodedOutputByteBufferNano.newInstance(flatArray);
         try {
@@ -51,10 +57,25 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        mKlvpProtocol.stream = flatArray;
+        mKlvpProtocol.stream2 = new byte[]{49,50,52,53,54,55,56,57,58,59,60,61};
+
+        byte[] klvpArray = new byte[mKlvpProtocol.getSerializedSize()];
+        CodedOutputByteBufferNano klvpOutput = CodedOutputByteBufferNano.newInstance(klvpArray);
+
+        try{
+            mKlvpProtocol.writeTo(klvpOutput);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         File file = new File("test.bin");
+        System.out.println("klvp total bytes len:" + mKlvpProtocol.getSerializedSize());
+
         try {
             FileOutputStream fout = new FileOutputStream(file);
-            fout.write(flatArray);
+            fout.write(klvpArray);
             fout.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();

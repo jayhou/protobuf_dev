@@ -8,6 +8,12 @@ syntax = "proto2";
 option java_package = "com.huami.watch.sensorhub";
 option java_outer_classname = "WatchWidgetInfo";
 
+message KlvpProtocol {
+    required int32 type = 1;
+    required bytes stream = 2;
+    required bytes stream2 = 3;
+    }
+
 message QuarterCircleProgress {
     required int32 icon = 1;
     required string shortText = 2;

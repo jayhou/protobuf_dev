@@ -3,6 +3,19 @@
 #include <pb_decode.h>
 #include "watch_widget_info.pb.h"
 
+static bool read_string(pb_istream_t *stream, const pb_field_t *field, void **arg)
+{
+    uint8_t buf[128] = {0};
+    size_t len = stream->bytes_left;
+    printf("stream left bytes:%ld\n",len);
+    if (len > sizeof(buf) - 1 || !pb_read(stream, buf, len))
+        return false;
+    
+    //TEST(strcmp((char*)buf, *arg) == 0);
+    printf("%s\n",(char*)buf);  // bytes of KlvpProtoccol.stream
+    return true;
+}
+
 int main()
 {
     /* This is the buffer where we will store our message. */
@@ -11,6 +24,10 @@ int main()
     
     {
         /* Allocate space for the decoded message. */
+        KlvpProtocol klvpProtocol = KlvpProtocol_init_default;
+        klvpProtocol.stream.funcs.decode = &read_string;
+        klvpProtocol.stream.arg = "test";
+        klvpProtocol.stream2.funcs.decode = &read_string;
         WatchFaceInfo watchFaceInfo = WatchFaceInfo_init_zero;
         // QuarterCircleStepProgress stepProgress = QuarterCircleStepProgress_init_zero;
         //SimpleMessage message = SimpleMessage_init_zero;
@@ -18,7 +35,7 @@ int main()
         int length;
         FILE* inputFile = fopen(NANO_BUF_FILE,"rb");
         if(inputFile == NULL) {
-            printf("file open failed !\n");
+            printf("file open failed :%s!\n",NANO_BUF_FILE);
             return 0;
         }
         fseek(inputFile, 0, SEEK_END);
@@ -37,8 +54,8 @@ int main()
 
         pb_istream_t stream = pb_istream_from_buffer(buffer, length);
 
-        status = pb_decode(&stream, WatchFaceInfo_fields, &watchFaceInfo);
-        
+        // status = pb_decode(&stream, WatchFaceInfo_fields, &watchFaceInfo);
+        status = pb_decode(&stream, KlvpProtocol_fields, &klvpProtocol);
         /* Check for errors... */
         if (!status)
         {
@@ -64,17 +81,3 @@ int main()
     
     return 0;
 }
-
-/*
-static bool read_string(pb_istream_t *stream, const pb_field_t *field, void **arg)
-{
-    uint8_t buf[20] = {0};
-    size_t len = stream->bytes_left;
-    
-    if (len > sizeof(buf) - 1 || !pb_read(stream, buf, len))
-        return false;
-    
-    //TEST(strcmp((char*)buf, *arg) == 0);
-    return true;
-}
-*/
