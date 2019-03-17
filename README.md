@@ -1,6 +1,11 @@
 # protobuf_dev
 
 ## protobuf 调试 （Linux）
+
+> 调试前需要先执行source setup.sh
+
+> java 部分最好使用IntelliJ IDEA打开执行
+
 > java protobuf demo,用来encode 来自java的protobuf数据，以Binery方式写入./protobuf_javanano/JavaNanoTest/test.bin
 
 > 代码路径：
