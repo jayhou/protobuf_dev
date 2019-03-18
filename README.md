@@ -14,6 +14,8 @@
 
 > protobuf c code:
 
+来自 [github nanopb](https://github.com/nanopb/nanopb) 使用版本 nanopb-0.3.4-linux-x86
+
 > protobuf_nano_c/nanopb/examples/watch_proto_test
 
 > make & ./watch_face_pb_test 命令来decode 来自文件 ./protobuf_javanano/JavaNanoTest/test.bin 的 字节流
