@@ -23,3 +23,6 @@
 > 修改./protobuf_nano_c/nanopb/examples/watch_proto_testt/watch_widget_info.proto
 
 > make 时会生成对应的java文件到 ./protobuf_javanano/JavaNanoTest/src/
+
+
+> Note：protoc 需要支持 --javanano_out参数，3.0.0 验证可用，使用protoc --version检查版本号
