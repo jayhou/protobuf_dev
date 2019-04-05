@@ -6,7 +6,13 @@ package com.huami.watch.sensorhub.nano;
 public interface WatchWidgetInfo {
 
   public static final class KlvpProtocol extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<KlvpProtocol> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            KlvpProtocol>(KlvpProtocol.class);
 
     private static volatile KlvpProtocol[] _emptyArray;
     public static KlvpProtocol[] emptyArray() {
@@ -108,7 +114,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class QuarterCircleProgress extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<QuarterCircleProgress> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            QuarterCircleProgress>(QuarterCircleProgress.class);
 
     private static volatile QuarterCircleProgress[] _emptyArray;
     public static QuarterCircleProgress[] emptyArray() {
@@ -210,7 +222,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class QuarterCircleStepProgress extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<QuarterCircleStepProgress> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            QuarterCircleStepProgress>(QuarterCircleStepProgress.class);
 
     private static volatile QuarterCircleStepProgress[] _emptyArray;
     public static QuarterCircleStepProgress[] emptyArray() {
@@ -334,7 +352,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class QuarterCircleText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<QuarterCircleText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            QuarterCircleText>(QuarterCircleText.class);
 
     private static volatile QuarterCircleText[] _emptyArray;
     public static QuarterCircleText[] emptyArray() {
@@ -414,7 +438,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class TinyCircleIcon extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<TinyCircleIcon> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            TinyCircleIcon>(TinyCircleIcon.class);
 
     private static volatile TinyCircleIcon[] _emptyArray;
     public static TinyCircleIcon[] emptyArray() {
@@ -494,7 +524,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class TinyCircleText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<TinyCircleText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            TinyCircleText>(TinyCircleText.class);
 
     private static volatile TinyCircleText[] _emptyArray;
     public static TinyCircleText[] emptyArray() {
@@ -574,7 +610,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class TinyCircleIconWText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<TinyCircleIconWText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            TinyCircleIconWText>(TinyCircleIconWText.class);
 
     private static volatile TinyCircleIconWText[] _emptyArray;
     public static TinyCircleIconWText[] emptyArray() {
@@ -665,7 +707,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class TinyCircleDText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<TinyCircleDText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            TinyCircleDText>(TinyCircleDText.class);
 
     private static volatile TinyCircleDText[] _emptyArray;
     public static TinyCircleDText[] emptyArray() {
@@ -777,7 +825,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class RoundRectCirleWText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<RoundRectCirleWText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            RoundRectCirleWText>(RoundRectCirleWText.class);
 
     private static volatile RoundRectCirleWText[] _emptyArray;
     public static RoundRectCirleWText[] emptyArray() {
@@ -879,7 +933,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class RoundRectTextOnly extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<RoundRectTextOnly> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            RoundRectTextOnly>(RoundRectTextOnly.class);
 
     private static volatile RoundRectTextOnly[] _emptyArray;
     public static RoundRectTextOnly[] emptyArray() {
@@ -959,7 +1019,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class SingleLineText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<SingleLineText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            SingleLineText>(SingleLineText.class);
 
     private static volatile SingleLineText[] _emptyArray;
     public static SingleLineText[] emptyArray() {
@@ -1039,7 +1105,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class MultiLineText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<MultiLineText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            MultiLineText>(MultiLineText.class);
 
     private static volatile MultiLineText[] _emptyArray;
     public static MultiLineText[] emptyArray() {
@@ -1151,7 +1223,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class ImageText extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<ImageText> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            ImageText>(ImageText.class);
 
     private static volatile ImageText[] _emptyArray;
     public static ImageText[] emptyArray() {
@@ -1279,7 +1357,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class QuarterCircleProgresses extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<QuarterCircleProgresses> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            QuarterCircleProgresses>(QuarterCircleProgresses.class);
 
     private static volatile QuarterCircleProgresses[] _emptyArray;
     public static QuarterCircleProgresses[] emptyArray() {
@@ -1389,7 +1473,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class QuarterCircleTexts extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<QuarterCircleTexts> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            QuarterCircleTexts>(QuarterCircleTexts.class);
 
     private static volatile QuarterCircleTexts[] _emptyArray;
     public static QuarterCircleTexts[] emptyArray() {
@@ -1499,7 +1589,13 @@ public interface WatchWidgetInfo {
   }
 
   public static final class WatchFaceInfo extends
-      com.google.protobuf.nano.MessageNano {
+      com.google.protobuf.nano.android.ParcelableMessageNano {
+
+    // Used by Parcelable
+    @SuppressWarnings({"unused"})
+    public static final android.os.Parcelable.Creator<WatchFaceInfo> CREATOR =
+        new com.google.protobuf.nano.android.ParcelableMessageNanoCreator<
+            WatchFaceInfo>(WatchFaceInfo.class);
 
     private static volatile WatchFaceInfo[] _emptyArray;
     public static WatchFaceInfo[] emptyArray() {

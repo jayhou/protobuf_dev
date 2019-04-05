@@ -22,4 +22,4 @@ watch_widget_info.pb.c: watch_widget_info.proto
 	echo $(PROTOC)
 	echo "java nano out path:"$(JAVANANO_OUT_PATH)
 	$(PROTOC) $(PROTOC_OPTS) --nanopb_out=. watch_widget_info.proto
-	$(PROTOC) $(PROTOC_OPTS) --javanano_out=$(JAVANANO_OUT_PATH) watch_widget_info.proto
+	$(PROTOC) $(PROTOC_OPTS) --javanano_out=enum_style=java,optional_field_style=accessors,parcelable_messages=true:$(JAVANANO_OUT_PATH) watch_widget_info.proto
