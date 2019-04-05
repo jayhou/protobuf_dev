@@ -14,7 +14,7 @@
 
 > protobuf c code:
 
-来自 [github nanopb](https://github.com/nanopb/nanopb) 使用版本 nanopb-0.3.4-linux-x86
+来自 [github nanopb](https://github.com/nanopb/nanopb) 使用版本 nanopb-0.3.9.3-linux-x86 nanopb-0.3.9.3-macosx-x86
 
 > protobuf_nano_c/nanopb/examples/watch_proto_test
 
