@@ -5,7 +5,7 @@ syntax = "proto2";
 //import "nanopb.proto";
 
 // for javanano
-option java_package = "com.huami.watch.sensorhub";
+option java_package = "com.jayhou.watch.sensorhub";
 option java_outer_classname = "WatchWidgetInfo";
 
 message KlvpProtocol {

@@ -1,5 +1,5 @@
 import com.google.protobuf.nano.CodedOutputByteBufferNano;
-import com.huami.watch.sensorhub.nano.WatchWidgetInfo;
+import com.jayhou.watch.sensorhub.nano.WatchWidgetInfo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
